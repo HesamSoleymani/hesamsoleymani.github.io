@@ -7,17 +7,28 @@
   </head>
   <body>
     <a
-      href="intent://balad.ir/places#Intent;scheme=https;package=ir.mservices.balad;S.browser_fallback_url=https://cafebazaar.ir/app/ir.nasim;end
+      href="intent://balad.ir/places#Intent;scheme=https;package=ir.mservices.balad;S.browser_fallback_url=https://hesamsoleymani.github.io/?param=ok;end
       "
+      id="test"
     >
-      4 تست
+      8 تست
     </a>
   </body>
   <script>
-    setTimeout(() => {
-      window.open(
-        "intent://balad.ir/places#Intent;scheme=https;package=ir.mservices.balad;S.browser_fallback_url=https://cafebazaar.ir/app/ir.nasim;end"
-      );
-    }, 1000);
+    let params = new URLSearchParams(document.location.search);
+    let name = params.get("param");
+    if (name == "ok") document.getElementById("test").innerHTML = "تست موفقق";
+    else {
+      // setTimeout(() => {
+      //   alert("ok2");
+      //   window.location.href =
+      //     "intent://balad.ir/places#Intent;scheme=https;package=ir.mservices.balad;S.browser_fallback_url=https://hesamsoleymani.github.io/?param=ok;end";
+      // }, 1000);
+      setTimeout(() => {
+        // alert("ok2");
+        window.location.href =
+          "intent://ble.ir/noskhe_bot#Intent;scheme=ble;package=ir.nasim;S.browser_fallback_url=https://google.com;end";
+      }, 1000);
+    }
   </script>
 </html>
